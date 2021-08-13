@@ -3,5 +3,17 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "My Gatsby Site",
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `TakeShape`,
+        fieldName: `takeshape`,
+        url: `YOUR-ENDPOINT-HERE`,
+        headers: {
+          Authorization: `Bearer YOUR-API-KEY-HERE`,
+        },
+      },
+    },
+  ],
 };
