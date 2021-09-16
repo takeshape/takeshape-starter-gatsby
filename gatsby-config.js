@@ -9,9 +9,9 @@ module.exports = {
       options: {
         typeName: `TakeShape`,
         fieldName: `takeshape`,
-        url: `YOUR-ENDPOINT-HERE`,
+        url: process.env.GATSBY_TAKESHAPE_ENDPOINT,
         headers: {
-          Authorization: `Bearer YOUR-API-KEY-HERE`,
+          Authorization: `Bearer ${process.env.GATSBY_TAKESHAPE_API_KEY}`,
         },
       },
     },
